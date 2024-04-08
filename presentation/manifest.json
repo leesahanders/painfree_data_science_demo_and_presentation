@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.2.3",
+  "metadata": {
+    "appmode": "quarto-static",
+    "primary_rmd": "2024-git-demo.qmd",
+    "primary_html": null,
+    "content_category": null,
+    "has_parameters": false
+  },
+  "quarto": {
+    "version": "1.3.340",
+    "engines": ["markdown"]
+  },
+  "packages": null,
+  "files": {
+    "_extensions/positslides/_extension.yml": {
+      "checksum": "16d2179feb0d86054b7dc1891ae9d857"
+    },
+    "_extensions/positslides/assets/backgrounds/30-70-dark.png": {
+      "checksum": "ac4ceff0505cd41762a367c124e1975f"
+    },
+    "_extensions/positslides/assets/backgrounds/30-70-light.png": {
+      "checksum": "ecd181ca83b9f955a280ee9f164c55d0"
+    },
+    "_extensions/positslides/assets/backgrounds/content-dark.png": {
+      "checksum": "539518aa18c640d82562c4ff191663f9"
+    },
+    "_extensions/positslides/assets/backgrounds/content-lhs.png": {
+      "checksum": "f4efa05149ab36899e90cc3a934ec307"
+    },
+    "_extensions/positslides/assets/backgrounds/content-rhs.png": {
+      "checksum": "0b51dbd241e01f9584ea57d51f0bcfc2"
+    },
+    "_extensions/positslides/assets/backgrounds/full-brackets-dark.png": {
+      "checksum": "ada20b549b6b7b61ab8ad0421e5fff9b"
+    },
+    "_extensions/positslides/assets/backgrounds/full-brackets-light.png": {
+      "checksum": "9f2a386f642864e830b72d9c905e9509"
+    },
+    "_extensions/positslides/assets/backgrounds/three-box.png": {
+      "checksum": "d7427144d6eebd608fd8eba14bd4b8a8"
+    },
+    "_extensions/positslides/assets/backgrounds/title-slide-option-1.png": {
+      "checksum": "420c17eabd9e101d0b1d49beabab85d1"
+    },
+    "_extensions/positslides/assets/backgrounds/title-slide-option-2.png": {
+      "checksum": "e2f69fa84d8545c967f43822088b3df1"
+    },
+    "_extensions/positslides/assets/backgrounds/title-slide-option-3.png": {
+      "checksum": "f2156a35d7679c5580e8617a596a7d6b"
+    },
+    "_extensions/positslides/assets/backgrounds/title-slide-option-4.png": {
+      "checksum": "8301e684abcb995c6ff0355e5dbec46c"
+    },
+    "_extensions/positslides/assets/posit-slides.js": {
+      "checksum": "bf2bb43bdb3c0e348c3068d10b913cc0"
+    },
+    "_extensions/positslides/custom.scss": {
+      "checksum": "3c963c9f17fd12ba3860580073aedb59"
+    },
+    "_extensions/positslides/logo.svg": {
+      "checksum": "f1d25d1201fae034318d89885d4b57ae"
+    },
+    "_extensions/positslides/positslides.lua": {
+      "checksum": "e21fef56903dbc2fa28eec63fea06c10"
+    },
+    ".Rprofile": {
+      "checksum": "79f234468434525a17af779705a7bc90"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-contrib/posit_slides/posit-slides.js": {
+      "checksum": "bf2bb43bdb3c0e348c3068d10b913cc0"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/light-border.css": {
+      "checksum": "0b646459f2ef479b718a65b2157c44e4"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/popper.min.js": {
+      "checksum": "ad6c106f3ba17d5a54d8053a4c4899ca"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/quarto-html.min.css": {
+      "checksum": "36a22d97e1327a96543d5593f276430f"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/tabby.min.js": {
+      "checksum": "c4219bb6375131a945d7e4bfc49c5f35"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/reset.css": {
+      "checksum": "4042c1a43777d540673cabc97cec67b2"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/reveal.css": {
+      "checksum": "b8181fffa0a3e6754be1fa355f7532b3"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/reveal.esm.js": {
+      "checksum": "820aa60cc9bfdee16a52b87fa56f782c"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/reveal.esm.js.map": {
+      "checksum": "e34e6f40268baa4bbaf5381322b0dc35"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/reveal.js": {
+      "checksum": "48b5fa2ff068f5e48b1be50a0fa166e9"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/reveal.js.map": {
+      "checksum": "b898d2d44f77fb1492a9be733a5d3c5b"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.css": {
+      "checksum": "488966d15e97f072801d7e348f4b5141"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.eot": {
+      "checksum": "9900a4643cc63c5d8f969d2196f72572"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.ttf": {
+      "checksum": "91295fa87df918411b49b7531da5d558"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.woff": {
+      "checksum": "cd382dc8a9d6317864b5810a320effc5"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/league-gothic/LICENSE": {
+      "checksum": "8fac5842e2f5a2e6bc067f5beb5035c9"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/LICENSE": {
+      "checksum": "8ea3e41b02e9f465515dad7c89459c5b"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.eot": {
+      "checksum": "72217712eb8d28872e7069322f3fda23"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.ttf": {
+      "checksum": "8256cfd7e4017a7690814879409212cd"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.woff": {
+      "checksum": "e74f0128884561828ce8c9cf5c284ab8"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.eot": {
+      "checksum": "1d71438462d532b62b05cdd7e6d7197d"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.ttf": {
+      "checksum": "2da39ecf9246383937da11b44b7bd9b4"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.woff": {
+      "checksum": "e7acc589bb558fe58936a853f570193c"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.eot": {
+      "checksum": "0f3da1edf1b5c6a94a6ad948a7664451"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.ttf": {
+      "checksum": "f3565095e6c9158140444970f5a2c5ed"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff": {
+      "checksum": "1cb8e94f1185f1131a0c895165998f2b"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.eot": {
+      "checksum": "58153ac7194e141d1e73ea88c6b63861"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf": {
+      "checksum": "c7e698a4d0956f4a939f42a05685bbf5"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff": {
+      "checksum": "6b058fc2634b01d837c3432316c3141f"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro.css": {
+      "checksum": "b4b58710f05264a4011912211d0a9eed"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/dist/theme/quarto.css": {
+      "checksum": "1872875aa0c826864da83d9b7fe7b965"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/highlight/highlight.esm.js": {
+      "checksum": "5abbd1f8ee249ae0d6c80408d2081dbb"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/highlight/highlight.js": {
+      "checksum": "e42092622b9ca4e1de619e58c9aa5335"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/highlight/monokai.css": {
+      "checksum": "8c43a819e1268fc57605f500adff816b"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/highlight/plugin.js": {
+      "checksum": "e50d6f6f20e1469edffd935d2cce0288"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/highlight/zenburn.css": {
+      "checksum": "28d5b9497037a12cb5a15644fea2f1c3"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/markdown/markdown.esm.js": {
+      "checksum": "680040ad1bdd81925b8540ee31f8f00b"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/markdown/markdown.js": {
+      "checksum": "1c65f0419784a4f6efb66077b73f6171"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/markdown/plugin.js": {
+      "checksum": "472e5a4bf0e0ddf7e03616675ceaccf0"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/math/katex.js": {
+      "checksum": "2a22abd1eb5a1c923f2d41178427715a"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/math/math.esm.js": {
+      "checksum": "2362e49689e5b8b1ad56421519f04b9f"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/math/math.js": {
+      "checksum": "d505146667f3a21cad572818229d7578"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/math/mathjax2.js": {
+      "checksum": "c1ea64afa05c3677d2c404755193b2be"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/math/mathjax3.js": {
+      "checksum": "faf5422ce0f2c9be5eec33164bed8031"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/math/plugin.js": {
+      "checksum": "ec9cb99b85a8026d24b26526f6effe0d"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/notes/notes.esm.js": {
+      "checksum": "5521f88f0a2793da2523a93342cc5881"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/notes/notes.js": {
+      "checksum": "1843550642852655b8dc0f639b2d7b2f"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/notes/plugin.js": {
+      "checksum": "701c19b5c0bec23297d19d9fec682c29"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/notes/speaker-view.html": {
+      "checksum": "fd6bbea4e158ee48ec77bbc44a162078"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/pdf-export/pdfexport.js": {
+      "checksum": "877fade43edbda847ff6fc722b6be5f6"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/pdf-export/plugin.yml": {
+      "checksum": "76add7202812cd14a48ca57b96777de4"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css": {
+      "checksum": "4ba6b644b711bc2fc89389d78209da6d"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js": {
+      "checksum": "8fca014a07bf017f06860da3410b4430"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/quarto-line-highlight/plugin.yml": {
+      "checksum": "4af9468c1cc516c6b54c12e686ba708f"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/quarto-support/footer.css": {
+      "checksum": "b756f7eedcfd9b82421dd144f0ef7578"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/quarto-support/plugin.yml": {
+      "checksum": "4f79b4a104bed30cd5b7b49d598bed88"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/quarto-support/support.js": {
+      "checksum": "d7da7cd03953347e7d7a12e078ce5780"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/reveal-menu/menu.css": {
+      "checksum": "1b9988f08dfe354c44e134304b3df8af"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/reveal-menu/menu.js": {
+      "checksum": "8db4f7eb4ad5670e6be4bdf83c389ca2"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/reveal-menu/plugin.yml": {
+      "checksum": "b949d3d3d5bdf5b5f508e6bfb328798e"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css": {
+      "checksum": "c8715037656f6595dbc3d9145fc7d8ac"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js": {
+      "checksum": "f911441bee5a8cd7635fe683fec20cdd"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/search/plugin.js": {
+      "checksum": "032f7408cd38991c3bd861582dd6322d"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/search/search.esm.js": {
+      "checksum": "5a4865036188db6309eec77fb9b9fd41"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/search/search.js": {
+      "checksum": "1d91bc7e321fae581fb65f502ef4ecd0"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/zoom/plugin.js": {
+      "checksum": "75d50a8cac0d19f0824a1c5876d36673"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/zoom/zoom.esm.js": {
+      "checksum": "b425222ed9d03cad024acb201af632ec"
+    },
+    "2023-sepm-299-health-checks-report-out_files/libs/revealjs/plugin/zoom/zoom.js": {
+      "checksum": "dbab999c1a2fe1f31046733759dd1e2b"
+    },
+    "2023-sepm-299-health-checks-report-out.html": {
+      "checksum": "8fb6c1b734f47d7eaecb33de10880c60"
+    },
+    "2023-sepm-299-health-checks-report-out.qmd": {
+      "checksum": "99c9a572c17f6def3e34c8c63ad2b277"
+    },
+    "calls_segments.png": {
+      "checksum": "13e22e4127c1ad0568ebfb81825ebb62"
+    },
+    "email_preview.jpg": {
+      "checksum": "08630251b6640289f197910a700173a7"
+    },
+    "renv.lock": {
+      "checksum": "ff09cd9b70505a384bd397c047033720"
+    }
+  },
+  "users": null
+}

@@ -1,5 +1,9 @@
 # git-it-done
 
+## Access the outputs
+
+
+
 ## Resources
 
 - Happy git with R: <https://github.com/jennybc/happy-git-with-r> 
@@ -13,3 +17,19 @@
 - happy git with r : at a glance 
 - demo
 
+
+## Troubleshooting 
+
+```r
+library(usethis)
+library(gitcreds)
+library(gh)
+library(credentials)
+
+usethis::gh_token_help()
+
+usethis::git_sitrep()
+
+gh::gh_whoami()
+
+```

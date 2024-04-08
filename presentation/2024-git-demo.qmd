@@ -1,0 +1,68 @@
+---
+title: "Git demo"
+subtitle: ""
+date: "2024-04-18"
+author: "Lisa Anders"
+title-slide-attributes: 
+  data-background-color: white
+  data-background-image: _extensions/positslides/assets/backgrounds/title-slide-option-1.png
+  data-background-size: contain
+format:
+  positslides-revealjs: 
+    width: "1600"
+    height: "900"
+    filters:
+      - positslides
+---
+
+## What is git? 
+
+
+
+## Backup
+
+## Default Slide 
+
+This text size is `normal`. 
+
+:::{.smaller}
+
+This text size is `smaller`. 
+
+Bullet points
+
+1. Point 1
+2. Point 2
+
+:::
+
+> Blocking comment
+
+:::{.smaller}
+
+:::: {.columns}
+
+::: {.column width="33%"}
+**Column 1**
+
+- Link to [external resource](url)
+:::
+
+::: {.column width="50%"}
+**Column 2**
+
+- ![But what about an image?](image.jpg){#fig-image fig-align="center" width="750"}
+:::
+
+::::
+
+:::
+
+::: {.notes}
+We can even add some notes 
+:::
+
+
+
+
+
