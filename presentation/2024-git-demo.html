@@ -620,7 +620,7 @@ Lisa Anders
 </section>
 <section class="slide level2 smaller">
 <h2>Secrets and RStudio</h2>
-<p><code>usethis</code> has a function for creating and editing the .Renviron file</p>
+<p><code>usethis</code> has a function for creating and editing the <code>.Renviron</code> file:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">library</span>(usethis)</span>
 <span id="cb7-2"><a href=""></a></span>
 <span id="cb7-3"><a href=""></a><span class="co"># Edit the global .Renviron file</span></span>
@@ -634,6 +634,14 @@ Lisa Anders
 </section>
 <section class="slide level2 smaller">
 <h2>Secrets and Python</h2>
+<p>Same as with R, environment variables can be referenced and used in your code:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="im">import</span> os</span>
+<span id="cb9-2"><a href=""></a></span>
+<span id="cb9-3"><a href=""></a><span class="co"># Setting a new environment variable</span></span>
+<span id="cb9-4"><a href=""></a>os.environ[<span class="st">"API_KEY"</span>] <span class="op">=</span> <span class="st">"YOUR_API_KEY"</span></span>
+<span id="cb9-5"><a href=""></a></span>
+<span id="cb9-6"><a href=""></a><span class="co"># Retrieving the environment variable</span></span>
+<span id="cb9-7"><a href=""></a>var <span class="op">=</span> os.environ[<span class="st">"variable_name"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 smaller">
 <h2>Secrets and git</h2>
@@ -702,8 +710,8 @@ venv
 <h2>Secrets and Posit Connect</h2>
 <p>Starting with version 1.6, RStudio Connect allows <a href="https://docs.rstudio.com/connect/admin/security-and-auditing/#application-environment-variables">Environment Variables</a>. The variables are encrypted on-disk, and in-memory.</p>
 <p>Adding a variable through the Posit Connect UI is easy peasy:</p>
-<p>PLACEHOLDER</p>
-<center>
+
+<img data-src="img/env_var.png" class="r-stretch"><center>
 <div class="citation" style="font-size: 16px">
 <p><a href="https://docs.posit.co/connect/user/content-settings/#content-vars">Connect Content Environment Variables</a></p>
 </div>

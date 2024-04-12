@@ -230,7 +230,7 @@ What is a secret?
 
 ## Secrets and RStudio  {.smaller}
 
-`usethis` has a function for creating and editing the .Renviron file
+`usethis` has a function for creating and editing the `.Renviron` file: 
 
 ```r
 library(usethis)
@@ -251,6 +251,18 @@ variable_name <- Sys.getenv("variable_name")
 ```
 
 ## Secrets and Python  {.smaller}
+
+Same as with R, environment variables can be referenced and used in your code:  
+
+```python 
+import os
+
+# Setting a new environment variable
+os.environ["API_KEY"] = "YOUR_API_KEY"
+
+# Retrieving the environment variable
+var = os.environ["variable_name"]
+```
 
 ## Secrets and git  {.smaller}
 
@@ -324,7 +336,7 @@ Starting with version 1.6, RStudio Connect allows [Environment Variables](https:
 
 Adding a variable through the Posit Connect UI is easy peasy: 
 
-PLACEHOLDER
+![](img/env_var.png)
 
 <center>
 
@@ -333,7 +345,6 @@ PLACEHOLDER
 :::
 
 </center>
-
 
 ## Imagine a world 
 
