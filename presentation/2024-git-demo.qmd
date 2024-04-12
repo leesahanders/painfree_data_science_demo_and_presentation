@@ -1,5 +1,5 @@
 ---
-title: "Git demo"
+title: "It's Dangerous to go Alone! Take This"
 subtitle: ""
 date: "2024-04-18"
 author: "Lisa Anders"
@@ -15,8 +15,362 @@ format:
       - positslides
 ---
 
-## What is git? 
+## Intro {.smaller}
 
+<center>
+
+![](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){width="50%"}
+
+</center>
+
+::: {layout="[2, 10]"}
+![](img/lisa-profile-2.png)
+
+**Lisa Anders** - Posit Solutions Engineer and self-professed R nerd learning to love Python. Engineer turned data scientist turned Posit admin and excited to share lessons learned the hard way to make things easier for others. Also awkward at writing intros in the third person!
+:::
+
+::: {.citation style="font-size: 16px"}
+"Illustration from Hadley Wickham's talk"The Joy of Functional Programming (for Data Science)." by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+:::
+
+## It's Dangerous to go Alone! Take This {.smaller}
+
+Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed. Wouldn't that be great?
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+![Version control your code](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg)
+
+:::
+
+::: {.column width="33%"}
+
+![Reproduceable environment management](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg)
+
+:::
+
+::: {.column width="33%"}
+
+![Keep secrets secret](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg)
+
+:::
+
+::::
+
+::: {.notes}
+Important tools that take the pain out of data science
+:::
+
+## Version control your code
+
+
+## Version control: Oh no things have gone off the rails! 
+
+
+
+## Reproduceable environment management {.smaller}
+
+Great data science work should be **reproducible** and **collaborative**. There are many ways to achieve this, but it's easy to fall into some bad strategies. 
+
+![](https://solutions.rstudio.com/environments/reproduce/reproducibility-strategies-and-danger-zones.png)
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+Environments Strategy Maps <https://solutions.rstudio.com/environments/reproduce/>
+:::
+
+</center>
+
+::: notes
+Being able to repeat experiments is the foundation of all science. Reproducing work is also critical for business applications: scheduled reporting, team collaboration, project validation.
+
+Environment Management Strategies: - Snapshot and Restore - The snapshot and restore strategy fits when package access is open and users are responsible for reproducibility. - Shared Baseline - The shared baseline strategy fits when administrators or R champions are responsible for creating an environment where less experienced users can easily share and re-run work. - Validated - The validated strategy is similar to the shared baseline strategy. The main difference is the validated strategy targets teams wishing to restrict access to a particular set of packages and teams wishing to approve or audit changes to the package environment.
+:::
+
+## Environment management example: Using renv, git, and Public Package Manager {.smaller}
+
+**Step 1: Use pre-compiled packages**
+
+-   Go to [Public Package Manager](https://packagemanager.rstudio.com/client/#/)
+
+-   Click on **Get Started** -\> **Setup** -\> **Distribution** and select your OS -\> Select **Latest** or **Freeze** and follow the instructions below the calendar.
+
+-   For example:
+
+``` r
+options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/all/latest"))
+```
+
+::: notes
+Congratulations! You are now using hosted binary packages, no more struggling against c headers! to a particular set of packages and teams wishing to approve or audit changes to the package environment.
+
+https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager
+
+Package Manager supports users for accessing binaries of their packages. UI for searching through packages. Get information about it, crucially any system pre-requisites. If you need to grab an old version Package Manager hosts the old versions. Useful working with renv because if you need to restore a project that is older then likely it will need that older version. RStudio has a sync server where we take changes from CRAN and build the binaries. When you go to install a package we have binaries created. Fast, doesn't need to be compiled from source. Useful for large packages like arrow (anything with system dependencies) to install quickly since it won't need to build and prevent build failures.
+
+We evaluate CRAN, Bioconductor, and PyPI each business day (Monday through Friday) and publish new snapshots when updates are available. Then, RStudio Public Package Manager syncs these snapshots daily. For example, suppose a CRAN package gets updated on Saturday. We will publish a new snapshot to the RStudio Package Service sometime on Monday, usually Monday afternoon. Then, the CRAN sync will pick up the change on Tuesday at 12:00 am. Occasionally, if there are very important updates, we generate an extra snapshot to make the updates available sooner. The timing of each snapshot varies based on the number of changes and the number of dependencies involved.
+:::
+
+## Environment management example: Using renv, git, and Public Package Manager {.smaller}
+
+**Step 2: Use environment tracking**
+
+``` r
+# Set up a new version controlled R project and install renv:
+install.packages("renv")
+library(renv)
+
+# Initialize your project with renv and take a snapshot:
+renv::init()
+renv::snapshot():
+
+# Update all packages, or revert back to an earlier snapshot:
+renv::update()
+renv::revert()
+
+# History is saved into version control:
+renv::history()
+```
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+renv <https://rstudio.github.io/renv>, Package Manager <https://rstudio.com/products/package-manager/> and Public Package Manager <https://packagemanager.rstudio.com/>
+:::
+
+</center>
+
+## Environment management example: Using renv, git, and Public Package Manager {.smaller}
+
+**Step 3: Easy collaboration**
+
+``` r
+# Have your colleague configure their repository to match yours: 
+options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/all/latest")) 
+
+## Send a colleague the link to your project on git, they'll restore your environment with:
+renv::restore()
+```
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+renv <https://rstudio.github.io/renv>, Package Manager <https://rstudio.com/products/package-manager/> and Public Package Manager <https://packagemanager.rstudio.com/>
+:::
+
+</center>
+
+::: notes
+Congratulations! You now have a project that has all dependencies explicitly tracked. You can come back to this project weeks, years later and will be able to create exactly the environment it needs in order to successfully run with one command, renv::restore().
+:::
+
+## Environment management example: Using venv, git, and Public Package Manager {.smaller}
+
+**Follow the same steps, as with R**
+
+**Step 1: Use pre-compiled packages**
+
+```bash
+# Configure pip to use packages from public package manager: 
+pip config set global.index-url https://packagemanager.posit.co/pypi/latest/simple
+pip config set global.trusted-host packagemanager.posit.co
+```
+
+**Step 2: Use environment tracking**
+
+```bash
+# Activate your virtual environment: 
+python -m venv .venv
+. .venv/bin/activate
+
+# Take a snapshot of the environment: 
+pip freeze > requirements.txt
+```
+
+**Step 3: Easy collaboration**
+
+```bash
+# Send a colleague the link to your project on git, they'll restore your environment with:
+pip install -r requirements.txt
+```
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+venv <https://docs.python.org/3/library/venv.html>, pip requirements.txt <https://pip.pypa.io/en/stable/reference/requirements-file-format/>, Package Manager <https://rstudio.com/products/package-manager/> and Public Package Manager <https://packagemanager.rstudio.com/>
+:::
+
+</center>
+
+::: notes
+
+:::
+
+## Keep secrets secret  {.smaller}
+
+Prevent exposing secret keys, passwords, sensitive config parameters in your code directly. This keeps those pieces more secure and less likely to escape into the wild. 
+
+
+
+First some stats - how many times are secrets exposed? 
+
+What is a secret? 
+
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+[environment variable's for securing sensitive variables](https://db.rstudio.com/best-practices/deployment/), [securing credentials](https://db.rstudio.com/best-practices/managing-credentials)
+:::
+
+</center>
+
+## Secrets and RStudio  {.smaller}
+
+`usethis` has a function for creating and editing the .Renviron file
+
+```r
+library(usethis)
+
+# Edit the global .Renviron file
+usethis::edit_r_environ()
+
+# Edit the project specific .Renviron file
+usethis::edit_r_environ(scope = "project")
+```
+
+Add the variables to that file in the format `variable_name = "variable_value"` and save it. Restart the session so the new environment variables will be loaded with `ctrl shift f10` or through the RStudio IDE with `session` -> `restart R`. 
+
+Saved variables can be accessed with:
+
+```r
+variable_name <- Sys.getenv("variable_name")
+```
+
+## Secrets and Python  {.smaller}
+
+## Secrets and git  {.smaller}
+
+The `.gitignore` file is powerful! Tell git to ignore certain files that exist locally. 
+
+ - While typically explicitly listing the file name is the desired addition, wildcards can be added to exclude a type of file. For example: `*.html`. 
+ 
+Here's an example `.gitignore`: 
+
+```
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+/*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
+rsconnect/
+
+# Deployment details from rsconnect-python
+rsconnect-python/
+
+# Temporary files
+.DS_Store
+__pycache__
+.ipynb_checkpoints
+
+rmarkdown-notebook/flights.csv
+
+.venv
+venv
+.env
+.Rprofile
+
+/.luarc.json
+
+/.quarto/
+```
+
+## Secrets and Posit Connect{.smaller}
+
+Starting with version 1.6, RStudio Connect allows [Environment Variables](https://docs.rstudio.com/connect/admin/security-and-auditing/#application-environment-variables). The variables are encrypted on-disk, and in-memory.
+
+Adding a variable through the Posit Connect UI is easy peasy: 
+
+PLACEHOLDER
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+[Connect Content Environment Variables](https://docs.posit.co/connect/user/content-settings/#content-vars)
+:::
+
+</center>
+
+
+## Imagine a world 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](img/arny-mogensen-rRgO49i8w2s-unsplash-2.png)
+
+:::
+
+::: {.column width="50%"}
+
+![](img/thomas-rey-Oadvsf3xH9E-unsplash.jpg)
+
+:::
+
+::::
+
+Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed. Wouldn't that be great?
+
+
+## TLDR {.smaller}
+
+**Cheat sheet for git (contributed)**: <https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html>
+
+**What They Forgot to Teach You About R** : <https://rstats.wtf/>
+
+**Happy Git with R** : <https://happygitwithr.com/>
+
+**Get started with renv in the RStudio IDE**: <https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html>
+
+**Environment variables on Connect**: <https://docs.posit.co/connect/user/content-settings/#content-vars> 
+
+**Using Public Package Manager** : <https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager>
+
+**Interested in our Enterprise Products? Click [here](https://www.rstudio.com/products/team/)**
 
 
 ## Backup

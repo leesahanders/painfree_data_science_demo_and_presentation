@@ -1,0 +1,150 @@
+---
+title: "New Quarto document"
+format:
+  html: 
+    theme: 
+      light: flatly
+      dark: darkly
+editor: source
+jupyter: python3
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## Opening data from excel
+
+Create a workbook
+
+```{python}
+from openpyxl import Workbook
+
+workbook = Workbook()
+sheet = workbook.active
+
+sheet["A1"] = "hello"
+sheet["B1"] = "world!"
+
+workbook.save(filename="hello_world.xlsx")
+```
+
+Load a Workbook
+
+```{python}
+from openpyxl import load_workbook
+workbook = load_workbook(filename="hello_world.xlsx")
+```
+
+Reference: <https://realpython.com/openpyxl-excel-spreadsheets-python/>
+
+## Using Python
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+Reference: <https://quarto.org/docs/computations/python.html>
+
+## Great tables!
+
+```{python}
+#| warning: false
+
+import numpy 
+import pandas
+import great_tables as gt
+from great_tables.data import sp500
+
+# Define the start and end dates for the data range
+start_date = "2010-06-07"
+end_date = "2010-06-14"
+
+# Filter sp500 using Pandas to dates between `start_date` and `end_date`
+sp500_mini = sp500[(sp500["date"] >= start_date) & (sp500["date"] <= end_date)]
+
+# Create a display table based on the `sp500_mini` table data
+(
+    gt.GT(data=sp500_mini)
+    .tab_header(title="S&P 500", subtitle=f"{start_date} to {end_date}")
+    .fmt_currency(columns=["open", "high", "low", "close"])
+    .fmt_date(columns="date", date_style="wd_m_day_year")
+    .fmt_number(columns="volume", compact=True)
+    .cols_hide(columns="adj_close")
+)
+
+```
+
+
+## ggplot2! 
+
+```{r}
+library(ggplot2)
+
+gg <- ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+
+gg
+```
+
+## plotly! 
+
+```{r}
+library(plotly)
+
+ggplotly(gg)
+```
+
+## On Python and reticulate
+
+We can also prepare to run Python from R using knitr with `reticulate`: `library(reticulate)`
+
+In that case you may want to install Python using reticulate: `install_python(version = "3.9:latest", list = FALSE, force = FALSE)`
+
+In general, it [is recommended](https://rdrr.io/cran/reticulate/man/install_python.html) that Python virtual environments are created using the copies of Python installed by install_python(). For example:
+
+```
+library(reticulate)
+
+# There is also support for a ":latest" suffix to select the latest patch release
+install_python("3.11:latest") # install latest patch available at python.org
+
+# select the latest 3.11.* patch installed locally
+virtualenv_create("my-environment", version = "3.11:latest")
+use_virtualenv("my-environment")
+```
+
+> ! 'CreateProcess' failed to run 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python.exe -c "import sys; print(sys.platform)"'
