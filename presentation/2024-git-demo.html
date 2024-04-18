@@ -11,7 +11,7 @@
 <script src="2024-git-demo_files/libs/quarto-contrib/posit_slides/posit-slides.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.550">
 
-  <meta name="author" content="Lisa Anders">
+  <meta name="author" content="Lisa Anders, Posit Solutions Engineer">
   <meta name="dcterms.date" content="2024-04-18">
   <title>It’s Dangerous to go Alone! Take This</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -398,7 +398,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Lisa Anders 
+Lisa Anders, Posit Solutions Engineer 
 </div>
 </div>
 </div>
@@ -426,31 +426,21 @@ Lisa Anders
 </section>
 <section class="slide level2 smaller">
 <h2>It’s Dangerous to go Alone! Take This</h2>
-<p>Imagine a world where code doesn’t disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed. Wouldn’t that be great?</p>
+<p>Imagine a world where code doesn’t disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed.</p>
+<center>
 <div class="columns">
 <div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
+<p><strong>Version control your code</strong></p>
 <p><img data-src="img/kerin-gedge-JDzoTGfoogA-unsplash.jpg"></p>
-<figcaption>Version control your code</figcaption>
-</figure>
-</div>
 </div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
+<p><strong>Reproduceable environments</strong></p>
 <p><img data-src="img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg"></p>
-<figcaption>Reproduceable environment management</figcaption>
-</figure>
-</div>
 </div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
+<p><strong>Keep secrets secret</strong></p>
 <p><img data-src="img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg"></p>
-<figcaption>Keep secrets secret</figcaption>
-</figure>
 </div>
 </div>
-</div>
+</center>
 <aside class="notes">
 <p>Important tools that take the pain out of data science</p>
 <style type="text/css">
@@ -467,15 +457,206 @@ Lisa Anders
 </section>
 <section class="slide level2">
 <h2>Version control your code</h2>
+<center>
+<p><img data-src="https://happygitwithr.com/img/watch-me-diff-watch-me-rebase-smaller.png" style="width:70.0%"></p>
+<div class="citation" style="font-size: 16px">
+<p>“Illustration from <a href="https://happygitwithr.com/">Jenny Bryan and Happy Git with R</a></p>
+</div>
+</center>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: What is this thing called “git”?</h2>
+<p>Who here has heard of git? Is anyone already using version control?</p>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: What is this thing called “git”?</h2>
+<div class="quarto-layout-panel" data-layout="[2, 10]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/265px-Tux.svg.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 83.3%;justify-content: flex-start;">
+<p>Git was developed by the one and only Linus Torvalds (of linux fame), initially released in 2005 (19 years ago!)</p>
+</div>
+</div>
+</div>
+<p>Git itself is an open source utility, but most commonly it is used through a managed service (which are all pretty much the same under the hood). Here is a more complete list of version control software options:</p>
+<ul>
+<li>Azure</li>
+<li>Bitbucket</li>
+<li>Github</li>
+<li>Gitlab</li>
+<li>Subversion (SVN)</li>
+<li>Jenkins</li>
+</ul>
+<blockquote>
+<p>Today’s focus will be on github</p>
+</blockquote>
+<center>
+<div class="citation" style="font-size: 16px">
+<p>“Linux penguin from <a href="https://en.wikipedia.org/wiki/Tux_(mascot)">Wikipedia</a></p>
+</div>
+</center>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: But really, what is it anyway?</h2>
+<p>Think of a process with some document (“mythesis”):</p>
+<ul>
+<li>Make a copy (“mythesis001”) and make your changes</li>
+<li>Compare your copy to the original document (“Updated with better abstract!”)</li>
+<li>Ask someone to review the differences (“LGTM!” - your advisor)</li>
+<li>Pull in those changes</li>
+</ul>
+<p>Horrible to self-manage, right? But having a software to do this for you is marvelous!</p>
+<p>What git doesn’t do is “file locking”. But there are some new features added that now make this possible:</p>
+<ul>
+<li>Gitlab: <a href="https://software.rcc.uchicago.edu/git/help/user/project/file_lock.md" class="uri">https://software.rcc.uchicago.edu/git/help/user/project/file_lock.md</a></li>
+<li>Github: <a href="https://github.blog/2017-03-02-git-lfs-2-0-0-released/" class="uri">https://github.blog/2017-03-02-git-lfs-2-0-0-released/</a></li>
+</ul>
+<blockquote>
+<p>DEMO (google drive)</p>
+</blockquote>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: Credentials (PAT)</h2>
+<p>First, you’ll need to set up your credentials. You can do this either with a PAT or an SSH key.</p>
+<p>PAT:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Copy the generated PAT to your clipboard. Provide this PAT next time a Git operation asks for your password OR store the PAT explicitly.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For example, you can store a PAT for a GitHub Enterprise deployment like so:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>(<span class="st">"https://github.acme.com"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add your email if needed:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>git config <span class="sc">--</span>global user.email <span class="st">"lisa.anders@posit.co"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check that it stored with:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">gitcreds_get</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: Credentials (SSH)</h2>
+<p>From terminal:</p>
+<ul>
+<li>Generate a new key with: <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></li>
+<li>Add your ssh key to the background client: <code>eval "$(ssh-agent -s)"</code> <code>ssh-add ~/.ssh/id_ed25519</code></li>
+<li>Or find an existing key with: <code>ls -al ~/.ssh</code></li>
+<li>Copy the key to your clipboard: <code>clip &lt; ~/.ssh/id_ed25519.pub</code></li>
+</ul>
+<p>Follow <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">here</a> to add it to your github account.</p>
+<p>Follow <a href="https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke">here</a> to remove / add a password.</p>
+<p>You may also need to configure some global options:</p>
+<pre><code>git config --global user.name ""
+git config --global user.email ""</code></pre>
+<p>You can check that SSH keys exist and the name with:</p>
+<pre><code>ls ~/.ssh
+ssh-keygen -p</code></pre>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: Credentials (SSH)</h2>
+<p>From RStudio:</p>
+<ul>
+<li>Go to Tools -&gt; Global Options -&gt; Git / SVN</li>
+<li>Create SSH Key</li>
+<li>Approve the key and add a password (if appropriate)</li>
+<li>View Public Key</li>
+<li>Copy that public key that was provided into the SSH and GPG keys section in your git under your profile settings.</li>
+</ul>
+<p>You’ll copy / update code using the <code>SSH</code> method from git.</p>
+<p>Can also be done directly in the terminal</p>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: Oh no things have gone off the rails!</h2>
+<p>Troubleshooting from R:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">library</span>(usethis)</span>
+<span id="cb8-2"><a href=""></a><span class="fu">library</span>(gitcreds)</span>
+<span id="cb8-3"><a href=""></a><span class="fu">library</span>(gh)</span>
+<span id="cb8-4"><a href=""></a><span class="fu">library</span>(credentials)</span>
+<span id="cb8-5"><a href=""></a></span>
+<span id="cb8-6"><a href=""></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span>
+<span id="cb8-7"><a href=""></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span>
+<span id="cb8-8"><a href=""></a>gh<span class="sc">::</span><span class="fu">gh_whoami</span>()</span>
+<span id="cb8-9"><a href=""></a></span>
+<span id="cb8-10"><a href=""></a><span class="co"># Remove any pre-existing credentials:</span></span>
+<span id="cb8-11"><a href=""></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_delete</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Troubleshooting from command line:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href=""></a><span class="co"># Check the git configuration:</span></span>
+<span id="cb9-2"><a href=""></a><span class="fu">git</span> config <span class="at">--list</span> </span>
+<span id="cb9-3"><a href=""></a></span>
+<span id="cb9-4"><a href=""></a><span class="co"># Check if an existing repository was cloned with ssh or https:</span></span>
+<span id="cb9-5"><a href=""></a><span class="fu">git</span> remote show origin</span>
+<span id="cb9-6"><a href=""></a></span>
+<span id="cb9-7"><a href=""></a><span class="co"># You can check that SSH keys exist and the name with:</span></span>
+<span id="cb9-8"><a href=""></a><span class="fu">ls</span> ~/.ssh</span>
+<span id="cb9-9"><a href=""></a><span class="fu">ssh-keygen</span> <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: Oh no things have gone off the rails!</h2>
+<p>Troubleshooting git when working in cloud environments:</p>
+<p>On a cloud instance check that is is writing to somewhere persistent, IE into /home/ and not into /opt/. Find where your library is:</p>
+<pre><code>.libPaths()</code></pre>
+<p>Change where git credentials are stored:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'store --file ~/.my-credentials'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2 smaller">
+<h2>Version control: so what are branches?</h2>
+<center>
+<p><img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/efae32ce-863f-4773-852c-4335e3ce4709.png?h=e88ba01376eab634c8e4250263e57f3e" style="width:65.0%"></p>
+<div class="citation" style="font-size: 16px">
+<p>“Illustration by <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></p>
+</div>
+</center>
 </section>
 <section class="slide level2">
-<h2>Version control: Oh no things have gone off the rails!</h2>
+<h2>Version control workflow</h2>
+<p>Teams standardize onto a branching philosophy:</p>
+<ul>
+<li><p>Centralized workflow: Teams use only a single repository and commit directly to the main branch.</p></li>
+<li><p>Feature branching: Teams use a new branch for each feature and don’t commit directly to the main branch.</p></li>
+<li><p>GitFlow: An extreme version of feature branching in which development occurs on the develop branch, moves to a release branch, and merges into the main branch.</p></li>
+<li><p>Personal branching: Similar to feature branching, but rather than develop on a branch per feature, it’s per developer. Every user merges to the main branch when they complete their work.</p></li>
+</ul>
+<blockquote>
+<p>DEMO (personal repo, project repo)</p>
+</blockquote>
+<div class="citation" style="font-size: 16px">
+<p>“Branching strategies from <a href="https://about.gitlab.com/topics/version-control/version-control-best-practices/">Gitlab</a></p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Version control best practices</h2>
+<ul>
+<li>When in doubt, work in a branch</li>
+<li>Write meaningful commit messages and commits (“Made ABC do 123”)</li>
+<li>Make small changes and merge often</li>
+<li>Feedback from reviews is invaluable</li>
+</ul>
+<p>As a reviewer:</p>
+<ul>
+<li>Clearly distinguish between required changes, suggested changes, and just good ol’ recommendations or thoughts. It’s easy for reviews to come across as micro-managing, and this can help in distinguishing between what changes are needed vs what is just knowledge sharing.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Version control advanced topic: pipelines</h2>
+<blockquote>
+<p>Demo</p>
+</blockquote>
+<p><a href="https://solutions.posit.co/operations/deploy-methods/ci-cd/" class="uri">https://solutions.posit.co/operations/deploy-methods/ci-cd/</a></p>
+</section>
+<section class="slide level2">
+<h2>How I sleep knowing my code is safely backed up</h2>
+<center>
+<p><img data-src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.flourishaustralia.org.au%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbody%2Fpublic%2F2020-09%2Fsleep.jpg%3Fitok%3DKlxmA0Iv&amp;f=1&amp;nofb=1&amp;ipt=32ada2d09c839081fc6011219906f5a27204ebec32cb5a8b13524fa159a8d16d&amp;ipo=images" style="width:65.0%"></p>
+<div class="citation" style="font-size: 16px">
+<p>“Illustration by <a href="https://www.flourishaustralia.org.au/sites/default/files/styles/body/public/2020-09/sleep.jpg?itok=KlxmA0Iv">Flourish Australia</a></p>
+</div>
+</center>
+</section>
+<section class="slide level2">
+<h2>Questions?</h2>
 </section>
 <section class="slide level2 smaller">
 <h2>Reproduceable environment management</h2>
 <p>Great data science work should be <strong>reproducible</strong> and <strong>collaborative</strong>. There are many ways to achieve this, but it’s easy to fall into some bad strategies.</p>
-
-<img data-src="https://solutions.rstudio.com/environments/reproduce/reproducibility-strategies-and-danger-zones.png" class="r-stretch"><center>
+<center>
+<p><img data-src="https://solutions.rstudio.com/environments/reproduce/reproducibility-strategies-and-danger-zones.png"></p>
 <div class="citation" style="font-size: 16px">
 <p>Environments Strategy Maps <a href="https://solutions.rstudio.com/environments/reproduce/" class="uri">https://solutions.rstudio.com/environments/reproduce/</a></p>
 </div>
@@ -503,7 +684,7 @@ Lisa Anders
 <li><p>Click on <strong>Get Started</strong> -&gt; <strong>Setup</strong> -&gt; <strong>Distribution</strong> and select your OS -&gt; Select <strong>Latest</strong> or <strong>Freeze</strong> and follow the instructions below the calendar.</p></li>
 <li><p>For example:</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">REPO_NAME =</span> <span class="st">"https://packagemanager.rstudio.com/all/latest"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">REPO_NAME =</span> <span class="st">"https://packagemanager.rstudio.com/all/latest"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>Congratulations! You are now using hosted binary packages, no more struggling against c headers! to a particular set of packages and teams wishing to approve or audit changes to the package environment.</p>
 <p>https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager</p>
@@ -524,20 +705,20 @@ Lisa Anders
 <section class="slide level2 smaller">
 <h2>Environment management example: Using renv, git, and Public Package Manager</h2>
 <p><strong>Step 2: Use environment tracking</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># Set up a new version controlled R project and install renv:</span></span>
-<span id="cb2-2"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span>
-<span id="cb2-3"><a href=""></a><span class="fu">library</span>(renv)</span>
-<span id="cb2-4"><a href=""></a></span>
-<span id="cb2-5"><a href=""></a><span class="co"># Initialize your project with renv and take a snapshot:</span></span>
-<span id="cb2-6"><a href=""></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
-<span id="cb2-7"><a href=""></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()<span class="sc">:</span></span>
-<span id="cb2-8"><a href=""></a></span>
-<span id="cb2-9"><a href=""></a><span class="co"># Update all packages, or revert back to an earlier snapshot:</span></span>
-<span id="cb2-10"><a href=""></a>renv<span class="sc">::</span><span class="fu">update</span>()</span>
-<span id="cb2-11"><a href=""></a>renv<span class="sc">::</span><span class="fu">revert</span>()</span>
-<span id="cb2-12"><a href=""></a></span>
-<span id="cb2-13"><a href=""></a><span class="co"># History is saved into version control:</span></span>
-<span id="cb2-14"><a href=""></a>renv<span class="sc">::</span><span class="fu">history</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="co"># Set up a new version controlled R project and install renv:</span></span>
+<span id="cb13-2"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span>
+<span id="cb13-3"><a href=""></a><span class="fu">library</span>(renv)</span>
+<span id="cb13-4"><a href=""></a></span>
+<span id="cb13-5"><a href=""></a><span class="co"># Initialize your project with renv and take a snapshot:</span></span>
+<span id="cb13-6"><a href=""></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
+<span id="cb13-7"><a href=""></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()<span class="sc">:</span></span>
+<span id="cb13-8"><a href=""></a></span>
+<span id="cb13-9"><a href=""></a><span class="co"># Update all packages, or revert back to an earlier snapshot:</span></span>
+<span id="cb13-10"><a href=""></a>renv<span class="sc">::</span><span class="fu">update</span>()</span>
+<span id="cb13-11"><a href=""></a>renv<span class="sc">::</span><span class="fu">revert</span>()</span>
+<span id="cb13-12"><a href=""></a></span>
+<span id="cb13-13"><a href=""></a><span class="co"># History is saved into version control:</span></span>
+<span id="cb13-14"><a href=""></a>renv<span class="sc">::</span><span class="fu">history</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 <div class="citation" style="font-size: 16px">
 <p>renv <a href="https://rstudio.github.io/renv" class="uri">https://rstudio.github.io/renv</a>, Package Manager <a href="https://rstudio.com/products/package-manager/" class="uri">https://rstudio.com/products/package-manager/</a> and Public Package Manager <a href="https://packagemanager.rstudio.com/" class="uri">https://packagemanager.rstudio.com/</a></p>
@@ -547,11 +728,11 @@ Lisa Anders
 <section class="slide level2 smaller">
 <h2>Environment management example: Using renv, git, and Public Package Manager</h2>
 <p><strong>Step 3: Easy collaboration</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Have your colleague configure their repository to match yours: </span></span>
-<span id="cb3-2"><a href=""></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">REPO_NAME =</span> <span class="st">"https://packagemanager.rstudio.com/all/latest"</span>)) </span>
-<span id="cb3-3"><a href=""></a></span>
-<span id="cb3-4"><a href=""></a><span class="do">## Send a colleague the link to your project on git, they'll restore your environment with:</span></span>
-<span id="cb3-5"><a href=""></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="co"># Have your colleague configure their repository to match yours: </span></span>
+<span id="cb14-2"><a href=""></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">REPO_NAME =</span> <span class="st">"https://packagemanager.rstudio.com/all/latest"</span>)) </span>
+<span id="cb14-3"><a href=""></a></span>
+<span id="cb14-4"><a href=""></a><span class="do">## Send a colleague the link to your project on git, they'll restore your environment with:</span></span>
+<span id="cb14-5"><a href=""></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 <div class="citation" style="font-size: 16px">
 <p>renv <a href="https://rstudio.github.io/renv" class="uri">https://rstudio.github.io/renv</a>, Package Manager <a href="https://rstudio.com/products/package-manager/" class="uri">https://rstudio.com/products/package-manager/</a> and Public Package Manager <a href="https://packagemanager.rstudio.com/" class="uri">https://packagemanager.rstudio.com/</a></p>
@@ -575,19 +756,19 @@ Lisa Anders
 <h2>Environment management example: Using venv, git, and Public Package Manager</h2>
 <p><strong>Follow the same steps, as with R</strong></p>
 <p><strong>Step 1: Use pre-compiled packages</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="co"># Configure pip to use packages from public package manager: </span></span>
-<span id="cb4-2"><a href=""></a><span class="ex">pip</span> config set global.index-url https://packagemanager.posit.co/pypi/latest/simple</span>
-<span id="cb4-3"><a href=""></a><span class="ex">pip</span> config set global.trusted-host packagemanager.posit.co</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href=""></a><span class="co"># Configure pip to use packages from public package manager: </span></span>
+<span id="cb15-2"><a href=""></a><span class="ex">pip</span> config set global.index-url https://packagemanager.posit.co/pypi/latest/simple</span>
+<span id="cb15-3"><a href=""></a><span class="ex">pip</span> config set global.trusted-host packagemanager.posit.co</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Step 2: Use environment tracking</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="co"># Activate your virtual environment: </span></span>
-<span id="cb5-2"><a href=""></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span>
-<span id="cb5-3"><a href=""></a><span class="bu">.</span> .venv/bin/activate</span>
-<span id="cb5-4"><a href=""></a></span>
-<span id="cb5-5"><a href=""></a><span class="co"># Take a snapshot of the environment: </span></span>
-<span id="cb5-6"><a href=""></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href=""></a><span class="co"># Activate your virtual environment: </span></span>
+<span id="cb16-2"><a href=""></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span>
+<span id="cb16-3"><a href=""></a><span class="bu">.</span> .venv/bin/activate</span>
+<span id="cb16-4"><a href=""></a></span>
+<span id="cb16-5"><a href=""></a><span class="co"># Take a snapshot of the environment: </span></span>
+<span id="cb16-6"><a href=""></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Step 3: Easy collaboration</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="co"># Send a colleague the link to your project on git, they'll restore your environment with:</span></span>
-<span id="cb6-2"><a href=""></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href=""></a><span class="co"># Send a colleague the link to your project on git, they'll restore your environment with:</span></span>
+<span id="cb17-2"><a href=""></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 <div class="citation" style="font-size: 16px">
 <p>venv <a href="https://docs.python.org/3/library/venv.html" class="uri">https://docs.python.org/3/library/venv.html</a>, pip requirements.txt <a href="https://pip.pypa.io/en/stable/reference/requirements-file-format/" class="uri">https://pip.pypa.io/en/stable/reference/requirements-file-format/</a>, Package Manager <a href="https://rstudio.com/products/package-manager/" class="uri">https://rstudio.com/products/package-manager/</a> and Public Package Manager <a href="https://packagemanager.rstudio.com/" class="uri">https://packagemanager.rstudio.com/</a></p>
@@ -607,11 +788,14 @@ Lisa Anders
           display:block!important;
       }</style></aside>
 </section>
+<section class="slide level2">
+<h2>Questions?</h2>
+</section>
 <section class="slide level2 smaller">
 <h2>Keep secrets secret</h2>
 <p>Prevent exposing secret keys, passwords, sensitive config parameters in your code directly. This keeps those pieces more secure and less likely to escape into the wild.</p>
-<p>First some stats - how many times are secrets exposed?</p>
 <p>What is a secret?</p>
+<p>How many times are secrets exposed?</p>
 <center>
 <div class="citation" style="font-size: 16px">
 <p><a href="https://db.rstudio.com/best-practices/deployment/">environment variable’s for securing sensitive variables</a>, <a href="https://db.rstudio.com/best-practices/managing-credentials">securing credentials</a></p>
@@ -621,27 +805,27 @@ Lisa Anders
 <section class="slide level2 smaller">
 <h2>Secrets and RStudio</h2>
 <p><code>usethis</code> has a function for creating and editing the <code>.Renviron</code> file:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">library</span>(usethis)</span>
-<span id="cb7-2"><a href=""></a></span>
-<span id="cb7-3"><a href=""></a><span class="co"># Edit the global .Renviron file</span></span>
-<span id="cb7-4"><a href=""></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
-<span id="cb7-5"><a href=""></a></span>
-<span id="cb7-6"><a href=""></a><span class="co"># Edit the project specific .Renviron file</span></span>
-<span id="cb7-7"><a href=""></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>(<span class="at">scope =</span> <span class="st">"project"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a><span class="fu">library</span>(usethis)</span>
+<span id="cb18-2"><a href=""></a></span>
+<span id="cb18-3"><a href=""></a><span class="co"># Edit the global .Renviron file</span></span>
+<span id="cb18-4"><a href=""></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
+<span id="cb18-5"><a href=""></a></span>
+<span id="cb18-6"><a href=""></a><span class="co"># Edit the project specific .Renviron file</span></span>
+<span id="cb18-7"><a href=""></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>(<span class="at">scope =</span> <span class="st">"project"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Add the variables to that file in the format <code>variable_name = "variable_value"</code> and save it. Restart the session so the new environment variables will be loaded with <code>ctrl shift f10</code> or through the RStudio IDE with <code>session</code> -&gt; <code>restart R</code>.</p>
 <p>Saved variables can be accessed with:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>variable_name <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"variable_name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>variable_name <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"variable_name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 smaller">
 <h2>Secrets and Python</h2>
 <p>Same as with R, environment variables can be referenced and used in your code:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="im">import</span> os</span>
-<span id="cb9-2"><a href=""></a></span>
-<span id="cb9-3"><a href=""></a><span class="co"># Setting a new environment variable</span></span>
-<span id="cb9-4"><a href=""></a>os.environ[<span class="st">"API_KEY"</span>] <span class="op">=</span> <span class="st">"YOUR_API_KEY"</span></span>
-<span id="cb9-5"><a href=""></a></span>
-<span id="cb9-6"><a href=""></a><span class="co"># Retrieving the environment variable</span></span>
-<span id="cb9-7"><a href=""></a>var <span class="op">=</span> os.environ[<span class="st">"variable_name"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a><span class="im">import</span> os</span>
+<span id="cb20-2"><a href=""></a></span>
+<span id="cb20-3"><a href=""></a><span class="co"># Setting a new environment variable</span></span>
+<span id="cb20-4"><a href=""></a>os.environ[<span class="st">"API_KEY"</span>] <span class="op">=</span> <span class="st">"YOUR_API_KEY"</span></span>
+<span id="cb20-5"><a href=""></a></span>
+<span id="cb20-6"><a href=""></a><span class="co"># Retrieving the environment variable</span></span>
+<span id="cb20-7"><a href=""></a>var <span class="op">=</span> os.environ[<span class="st">"variable_name"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2 smaller">
 <h2>Secrets and git</h2>
@@ -739,6 +923,9 @@ venv
 <p><strong>Interested in our Enterprise Products? Click <a href="https://www.rstudio.com/products/team/">here</a></strong></p>
 </section>
 <section class="slide level2">
+<h2>Questions?</h2>
+</section>
+<section class="slide level2">
 <h2>Backup</h2>
 </section>
 <section class="slide level2">
@@ -792,6 +979,15 @@ Figure&nbsp;1: But what about an image?
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Version control your code</h2>
+<center>
+<p><img data-src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png" style="width:70.0%"></p>
+<div class="citation" style="font-size: 16px">
+<p>“Illustration from Hadley Wickham’s talk”The Joy of Functional Programming (for Data Science).” by <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></p>
+</div>
+</center>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 

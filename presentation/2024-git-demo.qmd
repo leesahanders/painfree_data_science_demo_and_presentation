@@ -2,7 +2,7 @@
 title: "It's Dangerous to go Alone! Take This"
 subtitle: ""
 date: "2024-04-18"
-author: "Lisa Anders"
+author: "Lisa Anders, Posit Solutions Engineer"
 title-slide-attributes: 
   data-background-color: white
   data-background-image: _extensions/positslides/assets/backgrounds/title-slide-option-1.png
@@ -35,29 +35,39 @@ format:
 
 ## It's Dangerous to go Alone! Take This {.smaller}
 
-Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed. Wouldn't that be great?
+Imagine a world where code doesn't disappear and is backed up in version control, environments are explicit and easily reproduced, and secrets are responsibly managed. 
+
+<center>
 
 :::: {.columns}
 
 ::: {.column width="33%"}
 
-![Version control your code](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg)
+**Version control your code**
+
+![](img/kerin-gedge-JDzoTGfoogA-unsplash.jpg)
 
 :::
 
 ::: {.column width="33%"}
 
-![Reproduceable environment management](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg)
+**Reproduceable environments** 
+
+![](img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg)
 
 :::
 
 ::: {.column width="33%"}
 
-![Keep secrets secret](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg)
+**Keep secrets secret**
+
+![](img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg)
 
 :::
 
 ::::
+
+</center>
 
 ::: {.notes}
 Important tools that take the pain out of data science
@@ -65,18 +75,264 @@ Important tools that take the pain out of data science
 
 ## Version control your code
 
+<center>
 
-## Version control: Oh no things have gone off the rails! 
+![](https://happygitwithr.com/img/watch-me-diff-watch-me-rebase-smaller.png){width="70%"}
+
+::: {.citation style="font-size: 16px"}
+"Illustration from [Jenny Bryan and Happy Git with R](https://happygitwithr.com/)
+:::
+
+</center>
+
+## Version control: What is this thing called "git"? {.smaller}
+
+Who here has heard of git? Is anyone already using version control? 
 
 
+## Version control: What is this thing called "git"? {.smaller}
+
+::: {layout="[2, 10]"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/265px-Tux.svg.png)
+
+Git was developed by the one and only Linus Torvalds (of linux fame), initially released in 2005 (19 years ago!) 
+:::
+
+Git itself is an open source utility, but most commonly it is used through a managed service (which are all pretty much the same under the hood). Here is a more complete list of version control software options: 
+
+- Azure
+- Bitbucket
+- Github
+- Gitlab
+- Subversion (SVN)
+- Jenkins
+
+> Today's focus will be on github
+
+<center>
+
+::: {.citation style="font-size: 16px"}
+"Linux penguin from [Wikipedia](https://en.wikipedia.org/wiki/Tux_(mascot))
+:::
+
+</center>
+
+## Version control: But really, what is it anyway? {.smaller}
+
+Think of a process with some document ("mythesis"): 
+
+- Make a copy ("mythesis001") and make your changes 
+- Compare your copy to the original document ("Updated with better abstract!")
+- Ask someone to review the differences ("LGTM!" - your advisor)
+- Pull in those changes
+
+Horrible to self-manage, right? But having a software to do this for you is marvelous! 
+
+What git doesn't do is "file locking". But there are some new features added that now make this possible: 
+
+- Gitlab: <https://software.rcc.uchicago.edu/git/help/user/project/file_lock.md> 
+- Github: <https://github.blog/2017-03-02-git-lfs-2-0-0-released/> 
+
+> DEMO (google drive)
+
+## Version control: Credentials (PAT) {.smaller}
+
+First, you'll need to set up your credentials. You can do this either with a PAT or an SSH key. 
+
+PAT: 
+
+```r
+usethis::create_github_token()
+```
+
+Copy the generated PAT to your clipboard. Provide this PAT next time a Git operation asks for your password OR store the PAT explicitly.
+
+```r
+gitcreds::gitcreds_set()
+```
+
+For example, you can store a PAT for a GitHub Enterprise deployment like so:
+
+```r
+gitcreds::gitcreds_set("https://github.acme.com")
+```
+
+Add your email if needed:
+
+```r
+git config --global user.email "lisa.anders@posit.co"
+```
+
+Check that it stored with:
+
+```r
+gitcreds_get()
+```
+
+## Version control: Credentials (SSH) {.smaller}
+
+From terminal:
+
+-   Generate a new key with: `ssh-keygen -t ed25519 -C "your_email@example.com"`
+-   Add your ssh key to the background client: `eval "$(ssh-agent -s)"` `ssh-add ~/.ssh/id_ed25519`
+-   Or find an existing key with: `ls -al ~/.ssh`
+-   Copy the key to your clipboard: `clip < ~/.ssh/id_ed25519.pub`
+
+Follow [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add it to your github account.
+
+Follow [here](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke) to remove / add a password. 
+
+You may also need to configure some global options:
+
+```         
+git config --global user.name ""
+git config --global user.email ""
+```
+
+You can check that SSH keys exist and the name with:
+
+```         
+ls ~/.ssh
+ssh-keygen -p
+```
+
+
+## Version control: Credentials (SSH) {.smaller}
+
+From RStudio:
+
+-   Go to Tools -\> Global Options -\> Git / SVN
+-   Create SSH Key
+-   Approve the key and add a password (if appropriate)
+-   View Public Key
+-   Copy that public key that was provided into the SSH and GPG keys section in your git under your profile settings.
+
+You'll copy / update code using the `SSH` method from git.
+
+Can also be done directly in the terminal
+
+
+
+## Version control: Oh no things have gone off the rails! {.smaller}
+
+Troubleshooting from R:  
+
+```r
+library(usethis)
+library(gitcreds)
+library(gh)
+library(credentials)
+
+usethis::gh_token_help()
+usethis::git_sitrep()
+gh::gh_whoami()
+
+# Remove any pre-existing credentials:
+gitcreds::gitcreds_delete()
+
+```
+
+Troubleshooting from command line:
+
+``` bash
+# Check the git configuration:
+git config --list 
+
+# Check if an existing repository was cloned with ssh or https:
+git remote show origin
+
+# You can check that SSH keys exist and the name with:
+ls ~/.ssh
+ssh-keygen -p
+```
+
+## Version control: Oh no things have gone off the rails! {.smaller}
+
+Troubleshooting git when working in cloud environments: 
+
+On a cloud instance check that is is writing to somewhere persistent, IE into /home/ and not into /opt/. Find where your library is:
+
+```
+.libPaths()
+```
+
+Change where git credentials are stored: 
+
+``` bash
+git config --global credential.helper 'store --file ~/.my-credentials'
+```
+
+## Version control: so what are branches? {.smaller}
+
+<center>
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/efae32ce-863f-4773-852c-4335e3ce4709.png?h=e88ba01376eab634c8e4250263e57f3e){width="65%"}
+
+
+::: {.citation style="font-size: 16px"}
+"Illustration by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+:::
+
+</center>
+
+## Version control workflow 
+
+Teams standardize onto a branching philosophy: 
+
+- Centralized workflow: Teams use only a single repository and commit directly to the main branch.
+
+- Feature branching: Teams use a new branch for each feature and don't commit directly to the main branch.
+
+- GitFlow: An extreme version of feature branching in which development occurs on the develop branch, moves to a release branch, and merges into the main branch.
+
+- Personal branching: Similar to feature branching, but rather than develop on a branch per feature, it's per developer. Every user merges to the main branch when they complete their work.
+
+> DEMO (personal repo, project repo)
+
+::: {.citation style="font-size: 16px"}
+"Branching strategies from [Gitlab](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
+:::
+
+
+## Version control best practices
+
+- When in doubt, work in a branch 
+- Write meaningful commit messages and commits ("Made ABC do 123")
+- Make small changes and merge often
+- Feedback from reviews is invaluable
+
+As a reviewer: 
+
+- Clearly distinguish between required changes, suggested changes, and just good ol' recommendations or thoughts. It's easy for reviews to come across as micro-managing, and this can help in distinguishing between what changes are needed vs what is just knowledge sharing. 
+
+## Version control advanced topic: pipelines
+
+> Demo 
+
+<https://solutions.posit.co/operations/deploy-methods/ci-cd/>
+
+## How I sleep knowing my code is safely backed up 
+
+<center>
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.flourishaustralia.org.au%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbody%2Fpublic%2F2020-09%2Fsleep.jpg%3Fitok%3DKlxmA0Iv&f=1&nofb=1&ipt=32ada2d09c839081fc6011219906f5a27204ebec32cb5a8b13524fa159a8d16d&ipo=images){width="65%"}
+
+
+::: {.citation style="font-size: 16px"}
+"Illustration by [Flourish Australia](https://www.flourishaustralia.org.au/sites/default/files/styles/body/public/2020-09/sleep.jpg?itok=KlxmA0Iv)
+:::
+
+</center>
+
+## Questions? 
 
 ## Reproduceable environment management {.smaller}
 
 Great data science work should be **reproducible** and **collaborative**. There are many ways to achieve this, but it's easy to fall into some bad strategies. 
 
-![](https://solutions.rstudio.com/environments/reproduce/reproducibility-strategies-and-danger-zones.png)
-
 <center>
+
+![](https://solutions.rstudio.com/environments/reproduce/reproducibility-strategies-and-danger-zones.png)
 
 ::: {.citation style="font-size: 16px"}
 Environments Strategy Maps <https://solutions.rstudio.com/environments/reproduce/>
@@ -209,16 +465,15 @@ venv <https://docs.python.org/3/library/venv.html>, pip requirements.txt <https:
 
 :::
 
+## Questions? 
+
 ## Keep secrets secret  {.smaller}
 
 Prevent exposing secret keys, passwords, sensitive config parameters in your code directly. This keeps those pieces more secure and less likely to escape into the wild. 
 
-
-
-First some stats - how many times are secrets exposed? 
-
 What is a secret? 
 
+How many times are secrets exposed? 
 
 <center>
 
@@ -383,6 +638,7 @@ Imagine a world where code doesn't disappear and is backed up in version control
 
 **Interested in our Enterprise Products? Click [here](https://www.rstudio.com/products/team/)**
 
+## Questions? 
 
 ## Backup
 
@@ -429,5 +685,18 @@ We can even add some notes
 
 
 
+
+
+## Version control your code
+
+<center>
+
+![](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){width="70%"}
+
+::: {.citation style="font-size: 16px"}
+"Illustration from Hadley Wickham's talk"The Joy of Functional Programming (for Data Science)." by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+:::
+
+</center>
 
 

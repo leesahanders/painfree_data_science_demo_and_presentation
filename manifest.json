@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.3.1",
+  "metadata": {
+    "appmode": "static",
+    "primary_rmd": null,
+    "primary_html": "presentation/2024-git-demo.html",
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    "presentation/.Rprofile": {
+      "checksum": "ff685b6f4d439f3c63397d4d0d95381f"
+    },
+    "presentation/_extensions/positslides/_extension.yml": {
+      "checksum": "16d2179feb0d86054b7dc1891ae9d857"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/30-70-dark.png": {
+      "checksum": "ac4ceff0505cd41762a367c124e1975f"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/30-70-light.png": {
+      "checksum": "ecd181ca83b9f955a280ee9f164c55d0"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/content-dark.png": {
+      "checksum": "539518aa18c640d82562c4ff191663f9"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/content-lhs.png": {
+      "checksum": "f4efa05149ab36899e90cc3a934ec307"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/content-rhs.png": {
+      "checksum": "0b51dbd241e01f9584ea57d51f0bcfc2"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/full-brackets-dark.png": {
+      "checksum": "ada20b549b6b7b61ab8ad0421e5fff9b"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/full-brackets-light.png": {
+      "checksum": "9f2a386f642864e830b72d9c905e9509"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/three-box.png": {
+      "checksum": "d7427144d6eebd608fd8eba14bd4b8a8"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/title-slide-option-1.png": {
+      "checksum": "420c17eabd9e101d0b1d49beabab85d1"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/title-slide-option-2.png": {
+      "checksum": "e2f69fa84d8545c967f43822088b3df1"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/title-slide-option-3.png": {
+      "checksum": "f2156a35d7679c5580e8617a596a7d6b"
+    },
+    "presentation/_extensions/positslides/assets/backgrounds/title-slide-option-4.png": {
+      "checksum": "8301e684abcb995c6ff0355e5dbec46c"
+    },
+    "presentation/_extensions/positslides/assets/posit-slides.js": {
+      "checksum": "bf2bb43bdb3c0e348c3068d10b913cc0"
+    },
+    "presentation/_extensions/positslides/custom.scss": {
+      "checksum": "3c963c9f17fd12ba3860580073aedb59"
+    },
+    "presentation/_extensions/positslides/logo.svg": {
+      "checksum": "f1d25d1201fae034318d89885d4b57ae"
+    },
+    "presentation/_extensions/positslides/positslides.lua": {
+      "checksum": "e21fef56903dbc2fa28eec63fea06c10"
+    },
+    "presentation/2024-git-demo.html": {
+      "checksum": "488935244b132e77f49748a67e7c2909"
+    },
+    "presentation/2024-git-demo.qmd": {
+      "checksum": "49063a91ccbb6460543eb01051ae3d51"
+    },
+    "presentation/2024-git-demo_files/libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-contrib/posit_slides/posit-slides.js": {
+      "checksum": "bf2bb43bdb3c0e348c3068d10b913cc0"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/light-border.css": {
+      "checksum": "0b646459f2ef479b718a65b2157c44e4"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/quarto-html.min.css": {
+      "checksum": "68b329da9893e34099c7d8ad5cb9c940"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/quarto-syntax-highlighting.css": {
+      "checksum": "49bff82b9355f257417faaaa77dd1607"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/tabby.min.js": {
+      "checksum": "c4219bb6375131a945d7e4bfc49c5f35"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "presentation/2024-git-demo_files/libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/reset.css": {
+      "checksum": "4042c1a43777d540673cabc97cec67b2"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/reveal.css": {
+      "checksum": "b8181fffa0a3e6754be1fa355f7532b3"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/reveal.esm.js": {
+      "checksum": "820aa60cc9bfdee16a52b87fa56f782c"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/reveal.esm.js.map": {
+      "checksum": "e34e6f40268baa4bbaf5381322b0dc35"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/reveal.js": {
+      "checksum": "48b5fa2ff068f5e48b1be50a0fa166e9"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/reveal.js.map": {
+      "checksum": "b898d2d44f77fb1492a9be733a5d3c5b"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.css": {
+      "checksum": "488966d15e97f072801d7e348f4b5141"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.eot": {
+      "checksum": "9900a4643cc63c5d8f969d2196f72572"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.ttf": {
+      "checksum": "91295fa87df918411b49b7531da5d558"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/league-gothic/league-gothic.woff": {
+      "checksum": "cd382dc8a9d6317864b5810a320effc5"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/league-gothic/LICENSE": {
+      "checksum": "8fac5842e2f5a2e6bc067f5beb5035c9"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/LICENSE": {
+      "checksum": "8ea3e41b02e9f465515dad7c89459c5b"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.eot": {
+      "checksum": "72217712eb8d28872e7069322f3fda23"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.ttf": {
+      "checksum": "8256cfd7e4017a7690814879409212cd"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.woff": {
+      "checksum": "e74f0128884561828ce8c9cf5c284ab8"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.eot": {
+      "checksum": "1d71438462d532b62b05cdd7e6d7197d"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.ttf": {
+      "checksum": "2da39ecf9246383937da11b44b7bd9b4"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.woff": {
+      "checksum": "e7acc589bb558fe58936a853f570193c"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.eot": {
+      "checksum": "0f3da1edf1b5c6a94a6ad948a7664451"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.ttf": {
+      "checksum": "f3565095e6c9158140444970f5a2c5ed"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff": {
+      "checksum": "1cb8e94f1185f1131a0c895165998f2b"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.eot": {
+      "checksum": "58153ac7194e141d1e73ea88c6b63861"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf": {
+      "checksum": "c7e698a4d0956f4a939f42a05685bbf5"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff": {
+      "checksum": "6b058fc2634b01d837c3432316c3141f"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/fonts/source-sans-pro/source-sans-pro.css": {
+      "checksum": "b4b58710f05264a4011912211d0a9eed"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/dist/theme/quarto.css": {
+      "checksum": "f4e4cb8fd7f762e30e8256bfe71fe3af"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/highlight/highlight.esm.js": {
+      "checksum": "5abbd1f8ee249ae0d6c80408d2081dbb"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/highlight/highlight.js": {
+      "checksum": "e42092622b9ca4e1de619e58c9aa5335"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/highlight/monokai.css": {
+      "checksum": "8c43a819e1268fc57605f500adff816b"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/highlight/plugin.js": {
+      "checksum": "e50d6f6f20e1469edffd935d2cce0288"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/highlight/zenburn.css": {
+      "checksum": "28d5b9497037a12cb5a15644fea2f1c3"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/markdown/markdown.esm.js": {
+      "checksum": "680040ad1bdd81925b8540ee31f8f00b"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/markdown/markdown.js": {
+      "checksum": "1c65f0419784a4f6efb66077b73f6171"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/markdown/plugin.js": {
+      "checksum": "472e5a4bf0e0ddf7e03616675ceaccf0"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/math/katex.js": {
+      "checksum": "2a22abd1eb5a1c923f2d41178427715a"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/math/math.esm.js": {
+      "checksum": "2362e49689e5b8b1ad56421519f04b9f"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/math/math.js": {
+      "checksum": "d505146667f3a21cad572818229d7578"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/math/mathjax2.js": {
+      "checksum": "c1ea64afa05c3677d2c404755193b2be"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/math/mathjax3.js": {
+      "checksum": "faf5422ce0f2c9be5eec33164bed8031"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/math/plugin.js": {
+      "checksum": "ec9cb99b85a8026d24b26526f6effe0d"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/notes/notes.esm.js": {
+      "checksum": "5521f88f0a2793da2523a93342cc5881"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/notes/notes.js": {
+      "checksum": "1843550642852655b8dc0f639b2d7b2f"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/notes/plugin.js": {
+      "checksum": "701c19b5c0bec23297d19d9fec682c29"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/notes/speaker-view.html": {
+      "checksum": "fd6bbea4e158ee48ec77bbc44a162078"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/pdf-export/pdfexport.js": {
+      "checksum": "ffd4d01d9d43febdafbb8e23415940fd"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/pdf-export/plugin.yml": {
+      "checksum": "76add7202812cd14a48ca57b96777de4"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css": {
+      "checksum": "4ba6b644b711bc2fc89389d78209da6d"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js": {
+      "checksum": "2a5d4d07fe940a2a0d78aced7b94ab36"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/quarto-line-highlight/plugin.yml": {
+      "checksum": "4af9468c1cc516c6b54c12e686ba708f"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/quarto-support/footer.css": {
+      "checksum": "b756f7eedcfd9b82421dd144f0ef7578"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/quarto-support/plugin.yml": {
+      "checksum": "4f79b4a104bed30cd5b7b49d598bed88"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/quarto-support/support.js": {
+      "checksum": "f96812c757563961073840bad853766a"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/reveal-menu/menu.css": {
+      "checksum": "1b9988f08dfe354c44e134304b3df8af"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/reveal-menu/menu.js": {
+      "checksum": "8db4f7eb4ad5670e6be4bdf83c389ca2"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/reveal-menu/plugin.yml": {
+      "checksum": "b949d3d3d5bdf5b5f508e6bfb328798e"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css": {
+      "checksum": "c8715037656f6595dbc3d9145fc7d8ac"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js": {
+      "checksum": "f911441bee5a8cd7635fe683fec20cdd"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/search/plugin.js": {
+      "checksum": "032f7408cd38991c3bd861582dd6322d"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/search/search.esm.js": {
+      "checksum": "5a4865036188db6309eec77fb9b9fd41"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/search/search.js": {
+      "checksum": "1d91bc7e321fae581fb65f502ef4ecd0"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/zoom/plugin.js": {
+      "checksum": "75d50a8cac0d19f0824a1c5876d36673"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/zoom/zoom.esm.js": {
+      "checksum": "b425222ed9d03cad024acb201af632ec"
+    },
+    "presentation/2024-git-demo_files/libs/revealjs/plugin/zoom/zoom.js": {
+      "checksum": "dbab999c1a2fe1f31046733759dd1e2b"
+    },
+    "presentation/img/arny-mogensen-rRgO49i8w2s-unsplash-2.png": {
+      "checksum": "8a1bd493ff8e2407c6c9b5ca48d416aa"
+    },
+    "presentation/img/arny-mogensen-rRgO49i8w2s-unsplash.jpg": {
+      "checksum": "dd3f80adabd923a2b45cb1109221414a"
+    },
+    "presentation/img/env_var.png": {
+      "checksum": "80a2b48b5c958f7d6631f1ca7e4c2a9f"
+    },
+    "presentation/img/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg": {
+      "checksum": "e3862f38399bfc1951b758ef573a0cf2"
+    },
+    "presentation/img/kerin-gedge-JDzoTGfoogA-unsplash.jpg": {
+      "checksum": "c0ce2d148dd0d1fe02c6ea1d75c1081f"
+    },
+    "presentation/img/kerin-gedge-JDzoTGfoogA-unsplash2.jpg": {
+      "checksum": "0fcfabf0394316487318681ae5b333cf"
+    },
+    "presentation/img/lisa-profile-2.png": {
+      "checksum": "71bdf026b771838df36f56e9a05f21a9"
+    },
+    "presentation/img/lisa-profile.png": {
+      "checksum": "00d4ecdd3794da18cd1568a6bc7a2258"
+    },
+    "presentation/img/richard-brutyo-Sg3XwuEpybU-unsplash.jpg": {
+      "checksum": "36e55ccded7a8c6e9905043bc061fd42"
+    },
+    "presentation/img/thomas-rey-Oadvsf3xH9E-unsplash.jpg": {
+      "checksum": "04baa76e09dd7c959948ae8ecda36cd9"
+    },
+    "presentation/renv.lock": {
+      "checksum": "ff09cd9b70505a384bd397c047033720"
+    },
+    "quarto-hybrid-jupyter/_quarto.yml": {
+      "checksum": "b3f34c4bcdf7bfa50270f515faa69173"
+    },
+    "quarto-hybrid-jupyter/quarto-hybrid.qmd": {
+      "checksum": "36c159f21e3cb74e425eb48ead079905"
+    },
+    "quarto-hybrid-jupyter/README.md": {
+      "checksum": "e283f9a38c08a7cd6990b3b282693f91"
+    },
+    "quarto-hybrid-jupyter/requirements.txt": {
+      "checksum": "12df27c22296307f5583d1172f864daf"
+    },
+    "quarto-hybrid-knitr/quarto-hybrid.qmd": {
+      "checksum": "57d878438d95556c455ba41c69051ddd"
+    },
+    "README.md": {
+      "checksum": "9694c7736c8eeaba1a9a7551e7d0f719"
+    }
+  },
+  "users": null
+}
