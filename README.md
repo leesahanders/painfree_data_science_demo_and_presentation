@@ -36,7 +36,7 @@
 - Collaboration and time travel version control with git, github, and rstudio: <https://posit.co/resources/videos/collaboration-and-time-travel-version-control-with-git-github-and-rstudio/> 
 - Missing semester of your CS education on version control: <https://missing.csail.mit.edu/2020/version-control/> 
 - Ryan's recording (internal) for RStudio and Version control workshop: <https://positpbc.zoom.us/rec/share/RUgM2UCR8WvEWyNH8ahacc6mOjuBa8fDTHR0CbgNHeIv2g1tPWss3vmFCh6cE24P.-FnnzKHXJexBtYMU?pwd=kMQ8vVBrqg8T8dcbEMsAhTOvggKNcNG1>
-
+- Learn git branching: <https://learngitbranching.js.org/> 
 
 ## Troubleshooting 
 
