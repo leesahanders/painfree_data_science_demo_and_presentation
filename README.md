@@ -5,7 +5,6 @@
 
 **Access the presentation slides at: <> or at <>.**
 
-Make changes
 
 ## Resources
 
@@ -24,6 +23,9 @@ Make changes
 - Missing semester of your CS education on version control: <https://missing.csail.mit.edu/2020/version-control/> 
 - Ryan's recording (internal) for RStudio and Version control workshop: <https://positpbc.zoom.us/rec/share/RUgM2UCR8WvEWyNH8ahacc6mOjuBa8fDTHR0CbgNHeIv2g1tPWss3vmFCh6cE24P.-FnnzKHXJexBtYMU?pwd=kMQ8vVBrqg8T8dcbEMsAhTOvggKNcNG1>
 - Learn git branching: <https://learngitbranching.js.org/> 
+- The tidyverse code styling guide: <https://style.tidyverse.org/> 
+- The hitchhikers guide to Python code styling: <https://docs.python-guide.org/writing/style/> 
+- Google code style guides: <https://google.github.io/styleguide/> 
 
 ## Troubleshooting 
 

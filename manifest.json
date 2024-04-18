@@ -12,7 +12,7 @@
   "packages": null,
   "files": {
     "presentation/.Rprofile": {
-      "checksum": "ff685b6f4d439f3c63397d4d0d95381f"
+      "checksum": "f46deabe8bace108d1a80698eeede47f"
     },
     "presentation/_extensions/positslides/_extension.yml": {
       "checksum": "16d2179feb0d86054b7dc1891ae9d857"
@@ -66,10 +66,10 @@
       "checksum": "e21fef56903dbc2fa28eec63fea06c10"
     },
     "presentation/2024-git-demo.html": {
-      "checksum": "488935244b132e77f49748a67e7c2909"
+      "checksum": "de0deb3dc9115b2702c852f3f39ca740"
     },
     "presentation/2024-git-demo.qmd": {
-      "checksum": "49063a91ccbb6460543eb01051ae3d51"
+      "checksum": "b7c37f43877cb1902315589d4e4bb000"
     },
     "presentation/2024-git-demo_files/libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -336,7 +336,7 @@
       "checksum": "57d878438d95556c455ba41c69051ddd"
     },
     "README.md": {
-      "checksum": "9694c7736c8eeaba1a9a7551e7d0f719"
+      "checksum": "abdfd31bf56617a4d7030363094d19a4"
     }
   },
   "users": null
