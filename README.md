@@ -1,4 +1,4 @@
-# git-it-done
+# It's dangerous to go alone - take this! Lisa's best practices for pain-free data science
 
 > **Warning**
 > This is part of a repository that is prone to changes, and overhauls will happen without notice, but feel free to reach out with any questions/corrections/or help needs at lisamaeanders@gmail.com
