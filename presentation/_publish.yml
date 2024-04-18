@@ -1,0 +1,4 @@
+- source: 2024-git-demo.qmd
+  quarto-pub:
+    - id: a627fbec-16f2-44f6-9eca-193f2c4f1a83
+      url: 'https://questionable.quarto.pub/its-dangerous-to-go-alone-take-this'
