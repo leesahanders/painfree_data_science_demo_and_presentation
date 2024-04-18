@@ -1,24 +1,9 @@
 # git-it-done
 
 > **Warning**
-> This is part of a repository that is prone to  Changes and overhauls will happen without notice, but feel free to reach out with any questions/corrections/or help needs at lisamaeanders@gmail.com
+> This is part of a repository that is prone to changes, and overhauls will happen without notice, but feel free to reach out with any questions/corrections/or help needs at lisamaeanders@gmail.com
 
 **Access the presentation slides at: <> or at <>.**
-
-
-## Structure
-
-- to live is to suffer 
-- yet more stories of pain 
-- introduce git 
-- happy git with r : at a glance 
-- demo
-- how to use git poorly 
-- eventually you'll need to use more advanced features when you hit these pain points 
-- project sharing is not version control 
-- example with google docs and using comments / suggesting 
-- Python environment management 
-- R environment management 
 
 ## Resources
 
@@ -68,16 +53,6 @@ gh::gh_whoami()
 -   Keeping repositories up to date
 -   Collaboration using version control (branches, blame, etc)
 -   Advanced
-
-*Resources:*
-
--   Happy git with R: <https://happygitwithr.com/>
--   Deploying to Connect using CI / CD: <https://solutions.posit.co/operations/deploy-methods/ci-cd/>
--   Oh sh!t git: https://jvns.ca/blog/2018/10/27/new-zine--oh-shit--git-/
--   Allison Horst's git: https://twitter.com/allison_horst/status/1563210538510737409
--   Getting started with git in rstudio: <https://www.youtube.com/watch?v=jN6tvgt3GK8>
--   git-credentials: <https://usethis.r-lib.org/articles/articles/git-credentials.html>
--   git-credential-helpers: <https://blog.djnavarro.net/posts/2021-08-08_git-credential-helpers/>
 
 ```
 library(usethis)
