@@ -5,6 +5,8 @@
 
 **Access the presentation slides at: <> or at <>.**
 
+Make changes
+
 ## Resources
 
 - Happy git with R: <https://github.com/jennybc/happy-git-with-r> 
