@@ -315,7 +315,7 @@ As a reviewer:
 
 <center>
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.flourishaustralia.org.au%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbody%2Fpublic%2F2020-09%2Fsleep.jpg%3Fitok%3DKlxmA0Iv&f=1&nofb=1&ipt=32ada2d09c839081fc6011219906f5a27204ebec32cb5a8b13524fa159a8d16d&ipo=images){width="65%"}
+![How I sleep knowing my code is safely backed up](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.flourishaustralia.org.au%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbody%2Fpublic%2F2020-09%2Fsleep.jpg%3Fitok%3DKlxmA0Iv&f=1&nofb=1&ipt=32ada2d09c839081fc6011219906f5a27204ebec32cb5a8b13524fa159a8d16d&ipo=images){width="65%"}
 
 
 ::: {.citation style="font-size: 16px"}
@@ -624,25 +624,37 @@ Imagine a world where code doesn't disappear and is backed up in version control
 
 ## TLDR {.smaller}
 
-**Cheat sheet for git (contributed)**: <https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html>
+**Version control**: 
 
-**What They Forgot to Teach You About R** : <https://rstats.wtf/>
+- **Cheat sheet for git (contributed)**: <https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html>
+- **What They Forgot to Teach You About R** : <https://rstats.wtf/>
+- **Happy Git with R** : <https://happygitwithr.com/>
+- **Oh sh-t git**: <https://ohshitgit.com/> 
+- **Cheat sheet for git (contributed)**: <https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html>
+- **Missing semester of your CS education on version control**: <https://missing.csail.mit.edu/2020/version-control/> 
+- **Learn git branching**: <https://learngitbranching.js.org/> 
 
-**Happy Git with R** : <https://happygitwithr.com/>
+**Environment management**: 
 
-**Get started with renv in the RStudio IDE**: <https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html>
+- **Get started with renv in the RStudio IDE**: <https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html>
+- **You should be using renv**: <https://www.youtube.com/watch?v=GwVx_pf2uz4> 
+- **Using Public Package Manager** : <https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager>
 
-**Environment variables on Connect**: <https://docs.posit.co/connect/user/content-settings/#content-vars> 
+**Secrets**: 
 
-**Using Public Package Manager** : <https://support.rstudio.com/hc/en-us/articles/360046703913-FAQ-for-RStudio-Public-Package-Manager>
+- **Environment variables on Connect**: <https://docs.posit.co/connect/user/content-settings/#content-vars> 
+
+<center>
 
 **Interested in our Enterprise Products? Click [here](https://www.rstudio.com/products/team/)**
+
+</center>
 
 ## Questions? 
 
 ## Backup
 
-## Default Slide 
+## Default Slide {.smaller}
 
 This text size is `normal`. 
 
@@ -659,11 +671,9 @@ Bullet points
 
 > Blocking comment
 
-:::{.smaller}
-
 :::: {.columns}
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 **Column 1**
 
 - Link to [external resource](url)
@@ -672,31 +682,22 @@ Bullet points
 ::: {.column width="50%"}
 **Column 2**
 
-- ![But what about an image?](image.jpg){#fig-image fig-align="center" width="750"}
+![But what about an image?](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){width="50%"}
+
 :::
 
 ::::
 
+<center>
+
+::: {.citation style="font-size: 16px"}
+"[This](https://en.wikipedia.org/wiki/Citation) is a centered citation"
 :::
+
+</center>
 
 ::: {.notes}
 We can even add some notes 
 :::
-
-
-
-
-
-## Version control your code
-
-<center>
-
-![](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/data_cowboy.png){width="70%"}
-
-::: {.citation style="font-size: 16px"}
-"Illustration from Hadley Wickham's talk"The Joy of Functional Programming (for Data Science)." by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
-:::
-
-</center>
 
 
